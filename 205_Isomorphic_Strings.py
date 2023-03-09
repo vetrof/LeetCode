@@ -74,4 +74,5 @@ def isIsomorphic(s, t):
 # s = "badc"
 # t = "baba"
 
+
 print(isIsomorphic(s, t))

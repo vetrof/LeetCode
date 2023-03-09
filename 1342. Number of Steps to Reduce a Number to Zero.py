@@ -19,4 +19,5 @@ def numberOfSteps(self, num):
 
     return n
 
+
 print(numberOfSteps(0, 123))

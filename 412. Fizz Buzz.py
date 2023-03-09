@@ -15,4 +15,5 @@ def fizzBuzz(self, n):
 
     return x
 
+
 print(fizzBuzz(0, 3))

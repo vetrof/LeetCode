@@ -30,4 +30,5 @@ class Solution(object):
 ransomNote = "aa"
 magazine = "aab"
 
+
 print(Solution.canConstruct(0, ransomNote, magazine))
