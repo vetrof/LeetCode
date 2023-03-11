@@ -5,20 +5,10 @@ x.insert(0, 999)
 x.insert(3, 999)
 x.append(999)
 x.remove(999)
-x.pop(2)
-x.extend([0,1,2,3])
+# x.pop(2)
+# x.extend([0,1,2,3])
 
 
-print(x)
-print(x.count(3))
-
-print(len(x))
-x.insert(22, 9999)
-print(x)
-print(len(x))
-print(x.index(9999))
-
-x.pop(len(x) - 1)
 print(x)
 
 
