@@ -11,20 +11,20 @@
 
 def isSubsequence(s, t):
 
-    index_symbol_in_t = -1
-    for i in range(len(s)):
-        if s[i] in t and t.index(s[i]) > index_symbol_in_t:
-            index_symbol_in_t = t.index(s[i])
-            continue
+    sp = 0
+    tp = 0
 
-        else:
-            return False
+    while sp < len(s) and tp < len(t):
 
-    return True
+        if s[sp] == t[tp]:
+            sp += 1
 
+        tp += 1
 
-s = "abc"
-t = "ahbgdc"
+    return len(s) == sp
+
+s = "ab"
+t = "baab"
 
 
 print(isSubsequence(s, t))
