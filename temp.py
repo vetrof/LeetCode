@@ -1,14 +1,15 @@
 
 x = [123, 33, 32453, 3, 25, 3]
+print(id(x))
 
 x.insert(0, 999)
 x.insert(3, 999)
 x.append(999)
 x.remove(999)
-# x.pop(2)
-# x.extend([0,1,2,3])
+x.pop(2)
+x.extend([0,1,2,3])
 
-
+print(id(x))
 print(x)
 
 
