@@ -7,23 +7,35 @@ class Solution(object):
 
         # v2
 
-        print(nums)
+        # print(nums)
+        #
+        # p1 = 1
+        # p2 = 1
+        #
+        # while p1 < len(nums):
+        #
+        #     if nums[p1 - 1] == nums[p1]:
+        #         p1 += 1
+        #
+        #     else:
+        #         nums[p2] = nums[p1]
+        #         p1 += 1
+        #         p2 += 1
+        #
+        # return p2
 
-        p1 = 1
-        p2 = 1
+        # v3
 
-        while p1 < len(nums):
+        print(id(nums))
 
-            if nums[p1 - 1] == nums[p1]:
-                p1 += 1
+        i = 0
+        while i < len(nums):
 
+            if nums[i] in nums[i + 1:]:
+                nums.remove(i)
             else:
-                nums[p2] = nums[p1]
-                p1 += 1
-                p2 += 1
-
-        return p2
-
+                i += 1
+        return i
 
 
 
