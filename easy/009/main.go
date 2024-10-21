@@ -6,10 +6,15 @@ import (
 )
 
 func main() {
-	fmt.Println(isPalindrome(122231))
+	fmt.Println(isPalindrome(-122231))
 }
 
 func isPalindrome(x int) bool {
+
+	if x < 0 {
+		x = -x
+		return false
+	}
 
 	strInt := strconv.Itoa(x)
 	leght := len(strInt) - 1
