@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 )
 
 func main() {
@@ -12,23 +11,18 @@ func main() {
 func isPalindrome(x int) bool {
 
 	if x < 0 {
-		x = -x
 		return false
 	}
 
-	strInt := strconv.Itoa(x)
-	leght := len(strInt) - 1
+	original := x
+	reversed := 0
 
-	for i := 0; i < len(strInt); i++ {
-
-		a, _ := strconv.Atoi(string(strInt[i]))
-		b, _ := strconv.Atoi(string(strInt[leght-i]))
-
-		if a != b {
-			return false
-		}
+	for x > 0 {
+		digit := x % 10
+		reversed = reversed*10 + digit
+		x /= 10
 	}
 
-	return true
+	return original == reversed
 
 }
